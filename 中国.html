@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>ECharts</title>
+
+    <!-- 引入 echarts.js -->
+
+    <!-- 这里是加载刚下好的echarts.js，注意路径 -->
+
+    <script src="echarts.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div class="retPro" style="z-index:999;position: absolute;top:50px;left:110px;display: block;">
+						<a href='index.html' style="height:30px;background:#f2f2f2;line-height: 30px;border:1px solid #ccc;padding:5px 10px;margin-left:20px;border-radius:5px;cursor: pointer;color:#000000;text-decoration:none;">
+							返回
+						</a>
+			</div>
+    <div id="main" style="width: 1000px;height:600px;">
+	
+	
+	</div>
+
+    <script type="text/javascript">
+
+        // 基于准备好的dom，初始化echarts实例
+		var province=new Array('广东','山东','河南','四川','江苏','河北','湖南','安徽','湖北','浙江','广西','云南','江西','辽宁','黑龙江','陕西','山西','福建','贵州','重庆','吉林','甘肃','内蒙古','台湾','上海','新疆','北京','天津','海南','香港','宁夏','青海','西藏','澳门');
+		var province_value=new Array('10430.03','9579.31','9402.36','8041.82','7865.99','7185.42','6568.37','5950.1','5723.77','5442','4602.66','4596.6','4456.74','4374.63','3831.22','3732.74','3571.21','3552','3476.65','2884','2746.22','2557.53','2470.63','2316.2','2301.391','2181.33','1961.2','1293.82','867.15','709.76','630.14','562.67','300.21','55.23');
+
+        var myChart = echarts.init(document.getElementById('main'));
+
+ 
+
+        var option={
+
+            backgroundColor: '#f2f2f2',
+
+            textStyle: {
+                       //color:'#ffffff'
+                        color: 'rgba(255, 255, 255, 0.3)'
+
+                    },
+
+            series : [
+
+                {
+
+                    name: '人口普查',
+
+                    type: 'pie',
+
+                    radius: '55%',
+
+                    data:[
+
+                        {name:province[0],value:province_value[0]},
+					                {name:province[1],value:province_value[1]},
+									{name:province[2],value:province_value[2]},
+									{name:province[3],value:province_value[3]},
+									{name:province[4],value:province_value[4]},
+									{name:province[5],value:province_value[5]},
+									{name:province[6],value:province_value[6]},
+									{name:province[7],value:province_value[7]},{name:province[8],value:province_value[8]},
+									{name:province[9],value:province_value[9]},
+									{name:province[10],value:province_value[10]},
+									{name:province[11],value:province_value[11]},
+									{name:province[12],value:province_value[12]},
+									{name:province[13],value:province_value[13]},
+									{name:province[14],value:province_value[14]},
+									{name:province[15],value:province_value[15]},
+									{name:province[16],value:province_value[16]},
+									{name:province[17],value:province_value[17]},
+									{name:province[18],value:province_value[18]},
+									{name:province[19],value:province_value[19]},{name:province[20],value:province_value[20]},{name:province[21],value:province_value[21]},{name:province[22],value:province_value[22]},{name:province[23],value:province_value[23]},
+									{name:province[24],value:province_value[24]},
+									{name:province[25],value:province_value[25]},
+									{name:province[26],value:province_value[26]},{name:province[27],value:province_value[27]},{name:province[28],value:province_value[28]},
+									{name:province[29],value:province_value[29]},
+									{name:province[30],value:province_value[30]},{name:province[31],value:province_value[31]},{name:province[32],value:province_value[32]},
+									{name:province[33],value:province_value[33]}
+
+
+                    ],
+
+                    roseType: 'angle',
+
+ 
+
+                    itemStyle: {
+
+                        emphasis: {
+
+                            shadowBlur: 200,
+
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+
+                        }
+
+                    },
+
+                    label: {
+
+                        normal: {
+
+                            textStyle: {
+								color:'#000000'
+
+                                //color: 'rgba(255, 255, 255, 0.3)'
+
+                            }
+
+                        }
+
+                    },
+
+                    labelLine: {
+
+                        normal: {
+
+                            lineStyle: {
+								color:'#000000'
+
+                               // color: 'rgba(255, 255, 255, 0.3)'
+
+                            }
+
+                        }
+
+                    }
+
+ 
+
+                }
+
+            ]
+
+        }
+
+ 
+
+ 
+
+        // 使用刚指定的配置项和数据显示图表。
+
+        myChart.setOption(option);
+
+ 
+
+    </script>
+
+</body>
+
+</html>
